@@ -1,0 +1,120 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0D47A1; /* Navy blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    width: 60%; /* Adjusted for better spacing */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #001c55; /* Consistent background for simplicity */
+}
+
+header h1 {
+    color: #FFEB3B; /* Contrast color for visibility */
+    margin-bottom: 20px; /* More space under the header */
+}
+
+button, select, input[type="text"] {
+    background-color: #ffffff; /* Light background for inputs */
+    color: #333; /* Darker text for better readability */
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 16px; /* Larger font size for better readability */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 90%; /* Full width within the grid column */
+    margin: 10px 0; /* Increased spacing */
+}
+
+button:hover {
+    background-color: #003085;
+}
+
+#predictForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for better layout */
+    grid-gap: 20px; /* Increased gap for clarity */
+    align-items: center; /* Center items vertically */
+}
+
+#predictForm label {
+    text-align: left; /* Left align for clarity with inputs */
+    margin-right: 0; /* Remove margin */
+}
+
+.result, .error {
+    margin-top: 20px;
+    font-size: 20px;
+    width: 100%; /* Ensure full width visibility */
+    text-align: center; /* Center text for visibility */
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* More screen usage on smaller devices */
+    }
+
+    #predictForm {
+        grid-template-columns: 1fr; /* Stack elements in one column on small screens */
+    }
+}
+/* Button basic style */
+button {
+    position: relative;
+    overflow: hidden;
+    background-color: #0047AB; /* Dark blue */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    margin: 0 auto; /* Center the button */
+    display: block;
+}
+
+/* Button hover effect */
+button:hover {
+    padding-right: 30px; /* Increase padding to make space for arrow */
+}
+
+/* Button arrow animation */
+button::after {
+    content: '→'; /* Add your arrow icon */
+    position: absolute;
+    right: 10px; /* Start from the right */
+    top: 50%;
+    transform: translateY(-50%) translateX(20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover::after {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+}
+#startPage {
+    background-color: #FFEB3B; /* Bright yellow background */
+    color: #0047AB; /* Blue text specifically for home screen */
+    text-align: center;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    color: inherit; /* Ensure that the header takes the color specified for the container */
+}

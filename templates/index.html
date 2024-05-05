@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDK Anomaly Check</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<body>
+    <div class="container" id="startPage">
+        <header>
+            <h1>SDK Anomaly Check</h1>
+            <button onclick="goToSecondScreen()">Click to Proceed</button>
+        </header>
+    </div>
+    <div class="container" id="secondScreen" style="display:none;">
+        <header>
+            <h1>Enter Details</h1>
+        </header>
+        <form id="predictForm">
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount" placeholder="Enter amount">
+    
+            <label for="ip_address">IP Address:</label>
+            <input type="text" id="ip_address" name="ip_address" placeholder="Enter IP Address">
+
+            <label for="wallet_to">Wallet To:</label>
+            <input type="text" id="wallet_to" name="wallet_to" placeholder="Enter Wallet To">
+        
+            <!--<label for="region">Region:</label>
+            <input type="text" id="region" name="region" placeholder="Enter Region">-->
+        
+            <!--<label for="adjusted_age">Adjusted Age:</label>
+            <input type="text" id="adjusted_age" name="adjusted_age" placeholder="Enter Adjusted Age">-->
+        
+            <label for="browser_env">Browser Environment:</label>
+            <input type="text" id="browser_env" name="browser_env" placeholder="Enter Browser Environment">
+        
+            <label for="wallet_from">Wallet From:</label>
+            <input type="text" id="wallet_from" name="wallet_from" placeholder="Enter Wallet From">
+        
+            <label for="business_type_class">Business Type Class:</label>
+            <input type="text" id="business_type_class" name="business_type_class" placeholder="Enter Business Type Class">
+        
+            <!--<label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="Enter City">-->
+        
+            <label for="trx_type">Transaction Type:</label>
+            <input type="text" id="trx_type" name="trx_type" placeholder="Enter Transaction Type">
+        
+            <!--<label for="country">Country:</label>
+            <input type="text" id="country" name="country" placeholder="Enter Country">-->
+        
+            <button type="button" onclick="submitPrediction()">Submit</button>
+        </form>
+        <div id="predictionResult" style="color: green; margin-top: 20px;"></div>
+        <div id="predictionError" style="color: red; margin-top: 20px;"></div>        
+        <div id="predictionResult" style="color: green; margin-top: 20px;"></div>
+        <div id="predictionError" style="color: red; margin-top: 20px;"></div>      
+    </div>    
+    <script>
+        function goToSecondScreen() {
+            document.getElementById('startPage').style.display = 'none';
+            document.getElementById('secondScreen').style.display = 'block';
+        }
+        function submitPrediction() {
+    const formData = new URLSearchParams();
+    Array.from(document.querySelectorAll("#predictForm input")).forEach(input => formData.append(input.name, input.value));
+
+    fetch('/predict', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.result) {
+            document.getElementById('predictionResult').textContent = 'Prediction: ' + data.result;
+            document.getElementById('predictionError').textContent = '';
+        } else if (data.error) {
+            document.getElementById('predictionError').textContent = 'Error: ' + data.error;
+            document.getElementById('predictionResult').textContent = '';
+        }
+    })
+    .catch(error => {
+        document.getElementById('predictionError').textContent = 'Error: ' + error;
+        document.getElementById('predictionResult').textContent = '';
+    });
+}
+    </script>
+</body>
+</html>
