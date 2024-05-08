@@ -14,7 +14,7 @@ The Python notebooks inside Models show the code for the respective models and i
   **supervised:**
     Application of the supervised learning models RPCA, KNN, Adaboost,  LightGBM from the sklearn package on a sample of the data formed from the ‘total data’ file, and calculate the accuracy, precision, recall, F1-score of their predictions based on the flagged variable.
 
-Under the Analyiss folder you would find 2 notebooks : Full_Data_Analysis which holds the visualisation and Feature Engineering for the whole of the data and then Segment_Analysis that holds the analsis only for a selected segment of the data.
+Under the Analysis folder you would find 2 notebooks : Full_Data_Analysis which holds the visualisation and Feature Engineering for the whole of the data and then Segment_Analysis that holds the analsis only for a selected segment of the data.
 
 ![image](https://github.com/JITHIN-ANTONY-JOSEPH/ADS/assets/49895934/4f6212db-bb9b-48b4-bc5a-6c647ae663f9)
 
