@@ -16,7 +16,8 @@ The Python notebooks inside Models show the code for the respective models and i
 
 Under the Analysis folder you would find 2 notebooks : Full_Data_Analysis which holds the visualisation and Feature Engineering for the whole of the data and then Segment_Analysis that holds the analsis only for a selected segment of the data.
 
-![image](https://github.com/JITHIN-ANTONY-JOSEPH/ADS/assets/49895934/4f6212db-bb9b-48b4-bc5a-6c647ae663f9)
+![image](https://github.com/JITHIN-ANTONY-JOSEPH/ADS/assets/49895934/798b4d18-ac08-4ead-bd4f-a1e8f554a98b)
+
 
 
 
