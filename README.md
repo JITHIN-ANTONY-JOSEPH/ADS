@@ -19,6 +19,6 @@ Under the Analyiss folder you would find 2 notebooks : Full_Data_Analysis which 
 The other files are the files required for the WebApp to work which includes the App.py,html and csss files structured under template and static respectively.
 The pickle files that store the best LightGBM model is also present along with the encoder pkl.
 
-Folder Name	File Name	Details
-Models		
-![image](https://github.com/JITHIN-ANTONY-JOSEPH/ADS/assets/49895934/9b000b75-e49a-4b07-bfd0-0152c81f693c)
+
+![image](https://github.com/JITHIN-ANTONY-JOSEPH/ADS/assets/49895934/2097feb3-676e-40cb-b141-3aa3e670dbe1)
+
