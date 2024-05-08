@@ -16,9 +16,7 @@ The Python notebooks inside Models show the code for the respective models and i
 
 Under the Analyiss folder you would find 2 notebooks : Full_Data_Analysis which holds the visualisation and Feature Engineering for the whole of the data and then Segment_Analysis that holds the analsis only for a selected segment of the data.
 
-The other files are the files required for the WebApp to work which includes the App.py,html and csss files structured under template and static respectively.
-The pickle files that store the best LightGBM model is also present along with the encoder pkl.
+![image](https://github.com/JITHIN-ANTONY-JOSEPH/ADS/assets/49895934/4f6212db-bb9b-48b4-bc5a-6c647ae663f9)
 
 
-![image](https://github.com/JITHIN-ANTONY-JOSEPH/ADS/assets/49895934/2097feb3-676e-40cb-b141-3aa3e670dbe1)
 
